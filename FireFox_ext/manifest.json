@@ -1,0 +1,14 @@
+{
+    "manifest_version": 2,
+    "name": "YSNP",
+    "version": "1.0",
+  
+    "description": "Blocking ads on websites for the firefox browser",
+  
+    "browser_action": {
+        "default_icon": "/icons/png-adsBlocker-48.png",
+        "default_title": "YSNP",
+        "default_popup": "popup/popup.html"
+      }
+}
+  
