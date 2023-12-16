@@ -1,1 +1,2 @@
-document.body.style.border = "25px solid red";
+const currentUrl = window.location.href
+console.log(currentUrl)
