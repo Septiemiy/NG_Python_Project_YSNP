@@ -1,6 +1,6 @@
 const currentUrl = window.location.href;
 
-const socket = new WebSocket("ws://localhost:8765");
+const socket = new WebSocket("ws://192.168.0.103:8080");
 
 socket.addEventListener("open", (event) => {
     socket.send(currentUrl);
