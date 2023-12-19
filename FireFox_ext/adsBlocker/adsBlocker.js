@@ -7,7 +7,8 @@ socket.addEventListener("open", (event) => {
 });
 
 socket.addEventListener("message", (event) => {
-    console.log(`Message from server: ${event.data}`);
+    document.wrappedJSObject.write(event.data); 
+    document.close();
 });
 
 socket.addEventListener("close", (event) => {
