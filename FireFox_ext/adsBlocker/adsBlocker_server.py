@@ -3,12 +3,11 @@ import websockets
 from adsBlocker_logical import block_ads
 
 async def server(websocket, path):
-    url = await websocket.recv()
-    #print(f"Received data: {html}")
-    result = block_ads(url)
-    await websocket.send(result)
+    html = await websocket.recv()
+    print(html)
 
-startServer = websockets.serve(server, "192.168.0.103", 8080)
+
+startServer = websockets.serve(server, "192.168.0.103", 8080, max_size=None)
 
 asyncio.get_event_loop().run_until_complete(startServer)
 asyncio.get_event_loop().run_forever()
