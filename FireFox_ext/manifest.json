@@ -5,12 +5,16 @@
   
     "description": "Blocking ads on websites for the firefox browser",
 
-    "permissions": ["activeTab", "webRequest", "webNavigation", "tabs", "file://*/*"],
+    "permissions": ["activeTab", "file://*/*"],
+
+    "icons": {
+      "48": "icons/png-adsBlocker-48.png"
+    },
   
     "content_scripts": [
       {
         "matches": ["*://*/*"],
-        "js": ["adsBlocker/adsBlocker.js"]
+        "js": ["adsBlocker.js"]
       }
     ]
 }
