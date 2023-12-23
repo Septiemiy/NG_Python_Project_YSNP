@@ -1,5 +1,5 @@
 # About program
-Extension for browsers **Chrome** and **Firefox** which block html-tags with ads on webpage by using **JavaScript** and **Python**
+Extension for browser and **Firefox** which block html-tags with ads on webpage by using **JavaScript** and **Python**
 
 # How run in Firefox
 1. Clone this repository.
