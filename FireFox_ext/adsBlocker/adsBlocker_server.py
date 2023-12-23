@@ -5,8 +5,8 @@ from adsBlocker_logical import makeJSONFromDict
 async def server(websocket, path):
     try:
         html = await websocket.recv()
-        await makeJSONFromDict(html)
-        await websocket.send('True')
+        makeJSONFromDict(html)
+        await websocket.send('')
     except Exception as e:
         print(f"Error: {e}")
 

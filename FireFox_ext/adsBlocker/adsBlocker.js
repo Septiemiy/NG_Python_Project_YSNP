@@ -9,10 +9,6 @@ setInterval(() => {
     });
 
     socket.addEventListener("message", (event) => {
-        
-        
-        if(event.data === 'True')
-        {
             fetch(jsonURL)
             .then(response => response.json())
             .then(json => {
@@ -79,17 +75,28 @@ setInterval(() => {
                         }
                     }
                 }
+                var TagAd = json.Tag
+                if(TagAd !== null)
+                {
+                    for(var elementTag in TagAd)
+                    {
+                        var elements = document.getElementsByTagName(`${TagAd[elementTag]}`)
+                        if(elements)
+                        {
+                            for(var index = 0; index < elements.length; index++)
+                            {
+                                elements[index].style.display = "none"
+                            }
+                        }
+                    }
+                }
 
             })
             .catch(error => console.error('Error loading JSON:', error));
         }
-        else
-        {
-            console.log('Error from server')
-        }
-    });
+    );
 
     socket.addEventListener("close", (event) => {
-        console.log("Connection closed")
+        console.log("Success. Connection close")
     });
-},3000);
+}, 3000);
